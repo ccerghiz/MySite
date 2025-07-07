@@ -1,23 +1,40 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  color: #222;
   margin: 0;
   padding: 0;
-  color: #333;
-  line-height: 1.6;
+  min-height: 100vh;
+  background-image: Images/background.jpg;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-/* Header with a subtle background and layout */
+body::before {
+  content: '';
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: rgba(0,0,30,0.55);
+  z-index: 0;
+  pointer-events: none;
+}
+
+header, section, footer {
+  position: relative;
+  z-index: 1;
+}
+
 header {
-  background-color: #007bff;
-  color: white;
-  padding: 30px 20px;
+  background: transparent;
+  color: #fff;
+  padding: 50px 20px 20px 20px;
   text-align: center;
-  /* Optional: add a slight shadow for depth */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 
-/* Navigation styling with spacing and hover effects */
 nav {
   margin: 20px 0;
   text-align: center;
@@ -26,79 +43,61 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #007bff;
+  color: #b3d1ff;
   font-weight: bold;
   font-size: 16px;
   transition: color 0.3s, transform 0.2s;
 }
 
-nav a:hover {
-  color: #0056b3;
+nav a:hover,
+nav a:focus {
+  color: #fff;
   transform: scale(1.05);
+  outline: none;
 }
 
-/* Sections with padding and max width for readability */
 section {
+  max-width: 800px;
+  margin: 40px auto;
   padding: 30px 20px;
-  max-width: 1000px;
-  margin: 20px auto;
-  background: rgba(255,255,255,0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.87);
+  border-radius: 16px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.22);
 }
 
-/* Heading styles for visual hierarchy */
 h1, h2 {
-  color: #222;
+  color: #1a3155;
   margin-bottom: 15px;
 }
 
 h2 {
-  border-bottom: 2px solid #007bff;
+  border-left: 5px solid #3574d4;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-left: 15px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
 }
 
-/* Footer styling with centered text and background */
+a {
+  color: #3574d4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover,
+a:focus {
+  color: #18417a;
+}
+
 footer {
   text-align: center;
-  padding: 15px 20px;
-  background-color: #222;
+  padding: 25px 20px;
+  background: rgba(26,49,85,0.95);
   color: #fff;
   margin-top: 30px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-}
-
-/* Profile image styled as a circle with border */
-img.profile {
-  width: 150px;
-  border-radius: 50%;
-  border: 4px solid #007bff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-img.profile:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-
-/* Style pentru butonul home cu efect de hover */
-.home-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 15px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.home-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.23);
+  font-size: 1.05rem;
 }
 
