@@ -1,103 +1,69 @@
 body {
   font-family: Arial, sans-serif;
-  color: #222;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background-image: Images/background.jpg;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  left: 0; right: 0; top: 0; bottom: 0;
-  background: rgba(0,0,30,0.55);
-  z-index: 0;
-  pointer-events: none;
-}
-
-header, section, footer {
-  position: relative;
-  z-index: 1;
+  color: #333;
 }
 
 header {
-  background: transparent;
-  color: #fff;
-  padding: 50px 20px 20px 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
   text-align: center;
-  font-size: 2.2rem;
-  font-weight: 600;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 
 nav {
-  margin: 20px 0;
+  margin: 15px;
   text-align: center;
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 10px;
   text-decoration: none;
-  color: #b3d1ff;
+  color: #007bff;
   font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s, transform 0.2s;
-}
-
-nav a:hover,
-nav a:focus {
-  color: #fff;
-  transform: scale(1.05);
-  outline: none;
 }
 
 section {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 30px 20px;
-  background: rgba(255,255,255,0.87);
-  border-radius: 16px;
-  box-shadow: 0 6px 28px rgba(0,0,0,0.22);
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 h1, h2 {
-  color: #1a3155;
-  margin-bottom: 15px;
-}
-
-h2 {
-  border-left: 5px solid #3574d4;
-  display: inline-block;
-  padding-left: 15px;
-  font-weight: 700;
-  letter-spacing: 0.7px;
-}
-
-a {
-  color: #3574d4;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-a:hover,
-a:focus {
-  color: #18417a;
+  color: #333;
 }
 
 footer {
   text-align: center;
-  padding: 25px 20px;
-  background: rgba(26,49,85,0.95);
+  padding: 10px;
+  background-color: #222;
   color: #fff;
-  margin-top: 30px;
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.23);
-  font-size: 1.05rem;
+  margin-top: 20px;
 }
 
+img.profile {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.home-btn:hover {
+  background-color: #0056b3;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
